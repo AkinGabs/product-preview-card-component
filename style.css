@@ -1,0 +1,112 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    font-size: 14px
+}
+:root{
+    --Darkcyan:hsl(158, 36%, 37%);
+    --cream:hsl(30, 38%, 92%);
+    --Verydarkblue:hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White:hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card-content h3{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .25rem;
+    color: var(--Darkgrayishblue);
+    margin-bottom: .5em;
+}
+.card-content h1{
+    font-size: 2rem;
+    color: var(--Verydarkblue);
+    margin-bottom: .5em;
+}
+.card-content p{
+    font-size: 1rem;
+    color: var(--Darkgrayishblue);
+    margin-bottom: .5em;
+}
+.card-content h2{
+    color: var(--Darkcyan);
+    margin-bottom: .5em;
+}
+.price-tag{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
+    font-family: 'Fraunces', serif;
+}
+.price-tag h1{
+    color: var(--Darkcyan);
+}
+.price-tag p{
+    text-decoration: line-through;
+}
+.preview-card{
+   display: flex;
+   justify-content: center;
+   max-width: 40rem;
+   min-height: 30rem;
+   background-color: var(--White);
+   border-radius: 1.5rem;
+   overflow: hidden;
+   margin: 2em; 
+}
+.card-content {
+    color: var(--Darkgrayishblue);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly; 
+    padding: 0 2rem;
+    flex-basis: 50%;
+}
+.card-img{
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    background-position: center center;
+    content: " ";
+    flex-basis: 50%;
+}
+.cart-btn{
+    background-color: var(--Darkcyan);
+    padding: 1em 3em;
+    border-radius: 5px;
+    color: var(--White);
+    margin-bottom: 1em;
+    display: inline-block;
+}
+.cart-btn:hover{
+    background-color: #184131;
+}
+
+@media (max-width:375px) {
+    .preview-card{
+        flex-direction: column;  
+        min-height: 95%;
+    }
+   .preview-card > div{
+       flex: 1;
+   }
+    .card-img{
+        background-image: url(./images/image-product-mobile.jpg);
+        background-size: cover;
+        
+    }
+}
